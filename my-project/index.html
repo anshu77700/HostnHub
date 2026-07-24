@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HostNHub — Your AI Productivity Hub</title>
+  <meta name="description"
+    content="HostNHub is an AI-powered email and calendar assistant that helps you manage, automate, and stay ahead. Email. Calendar. Automated." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav id="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="#" class="logo" aria-label="HostNHub Home">
+      <img src="logo-wide.jpeg" alt="HostNHub" class="logo-img" width="220" height="60" />
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+    <a href="#get-started" class="btn btn-outline nav-cta">Get Started</a>
+
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="#features" onclick="closeMobileMenu()">Features</a>
+    <a href="#how-it-works" onclick="closeMobileMenu()">How It Works</a>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#get-started" class="btn btn-primary" onclick="closeMobileMenu()">
+      Get Started <span class="btn-arrow">&#8594;</span>
+    </a>
+  </div>
+
+  <main>
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="hero-inner">
+
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            <img src="logo-wide.jpeg" alt="HostNHub" class="hero-logo-img" width="520" height="140" />
+          </h1>
+
+          <p class="hero-tagline">
+            Your AI Productivity Hub.<br />
+            Email. Calendar. Automated.
+          </p>
+
+          <div class="divider-row" aria-hidden="true">
+            <div class="divider-line"></div>
+            <span>&#10022;</span>
+            <div class="divider-line"></div>
+          </div>
+
+          <p class="hero-description">
+            AI-powered email and calendar assistant that helps you manage, automate, and stay ahead.
+          </p>
+
+          <div class="hero-actions" id="get-started">
+            <a href="#features" class="btn btn-primary" id="cta-get-started">
+              Get Started <span class="btn-arrow">&#8594;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <img src="hero-icons.png" alt="3D icons of email and calendar floating in orbit" class="hero-img" width="560"
+            height="560" loading="eager" />
+        </div>
+
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="scroll-arrow"></div>
+        <span>Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         SECTION 1 — PROBLEM
+    ════════════════════════════════════ -->
+    <section class="section problem-section" id="problem">
+      <div class="container">
+        <div class="problem-grid">
+
+          <div class="problem-copy reveal">
+            <p class="section-label">The Problem</p>
+            <h2 class="section-heading">Stop managing work.<br />Start making progress.</h2>
+            <p class="section-body">
+              Every day starts the same—searching through emails, planning meetings, replying to messages, and keeping
+              track of your schedule. Small tasks consume valuable time before the real work even begins.
+            </p>
+            <p class="section-body">
+              HostnHub lets AI agents handle repetitive work behind the scenes, so you stay organized, focused, and
+              productive.
+            </p>
+          </div>
+
+          <div class="problem-visual reveal reveal-delay-1" aria-hidden="true">
+            <svg class="problem-svg" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Background subtle grid -->
+              <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a1a" stroke-width="1" />
+                </pattern>
+              </defs>
+              <rect width="480" height="360" fill="url(#grid)" opacity="0.5" />
+
+              <!-- CHAOS SIDE — stacked messy emails -->
+              <g class="chaos-group">
+                <!-- email stack 1 (tilted) -->
+                <g transform="translate(60,80) rotate(-8)">
+                  <rect width="120" height="80" rx="8" fill="#111" stroke="#262626" stroke-width="1.5" />
+                  <line x1="12" y1="20" x2="108" y2="20" stroke="#333" stroke-width="1.5" />
+                  <line x1="12" y1="34" x2="90" y2="34" stroke="#222" stroke-width="1.5" />
+                  <line x1="12" y1="46" x2="75" y2="46" stroke="#222" stroke-width="1" />
+                  <line x1="12" y1="58" x2="60" y2="58" stroke="#1e1e1e" stroke-width="1" />
+                  <!-- unread dot -->
+                  <circle cx="108" cy="12" r="5" fill="#3a3a3a" />
+                </g>
+                <!-- email stack 2 -->
+                <g transform="translate(55,90) rotate(5)">
+                  <rect width="120" height="80" rx="8" fill="#0d0d0d" stroke="#262626" stroke-width="1.5" />
+                  <line x1="12" y1="20" x2="108" y2="20" stroke="#2a2a2a" stroke-width="1.5" />
+                  <line x1="12" y1="34" x2="85" y2="34" stroke="#222" stroke-width="1.5" />
+                  <line x1="12" y1="46" x2="70" y2="46" stroke="#1a1a1a" stroke-width="1" />
+                </g>
+                <!-- email stack 3 -->
+                <g transform="translate(70,100) rotate(-3)">
+                  <rect width="120" height="80" rx="8" fill="#0a0a0a" stroke="#262626" stroke-width="1.5" />
+                  <line x1="12" y1="20" x2="108" y2="20" stroke="#282828" stroke-width="1.5" />
+                  <line x1="12" y1="34" x2="95" y2="34" stroke="#1e1e1e" stroke-width="1.5" />
+                </g>
+
+                <!-- calendar chaos -->
+                <g transform="translate(50,195) rotate(6)">
+                  <rect width="130" height="110" rx="10" fill="#111" stroke="#262626" stroke-width="1.5" />
+                  <rect x="0" y="0" width="130" height="28" rx="10" fill="#1a1a1a" />
+                  <rect x="0" y="18" width="130" height="10" fill="#1a1a1a" />
+                  <!-- dots in calendar -->
+                  <circle cx="22" cy="52" r="5" fill="#333" />
+                  <circle cx="44" cy="52" r="5" fill="#2a2a2a" />
+                  <circle cx="66" cy="52" r="5" fill="#333" />
+                  <circle cx="88" cy="52" r="5" fill="#444" />
+                  <circle cx="110" cy="52" r="5" fill="#2a2a2a" />
+                  <circle cx="22" cy="74" r="5" fill="#2a2a2a" />
+                  <circle cx="44" cy="74" r="5" fill="#383838" />
+                  <circle cx="66" cy="74" r="5" fill="#262626" />
+                  <circle cx="88" cy="74" r="5" fill="#333" />
+                  <circle cx="110" cy="74" r="5" fill="#2a2a2a" />
+                  <circle cx="22" cy="96" r="5" fill="#333" />
+                  <circle cx="44" cy="96" r="5" fill="#2a2a2a" />
+                  <!-- conflict indicator -->
+                  <rect x="55" y="62" width="60" height="22" rx="4" fill="#1e1e1e" stroke="#3a3a3a" stroke-width="1" />
+                  <line x1="64" y1="71" x2="108" y2="71" stroke="#444" stroke-width="1.5" />
+                  <line x1="64" y1="77" x2="95" y2="77" stroke="#333" stroke-width="1" />
+                </g>
+              </g>
+
+              <!-- ARROW in center -->
+              <g transform="translate(207,155)">
+                <line x1="0" y1="0" x2="52" y2="0" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3" />
+                <polygon points="52,0 44,-5 44,5" fill="#444" />
+              </g>
+              <!-- AI label above arrow -->
+              <text x="222" y="148" font-family="Inter,sans-serif" font-size="9" fill="#555"
+                letter-spacing="2">AI</text>
+
+              <!-- ORDER SIDE — clean organized state -->
+              <g transform="translate(278,0)">
+                <!-- clean email card -->
+                <g transform="translate(22,74)">
+                  <rect width="160" height="72" rx="12" fill="#111" stroke="#2a2a2a" stroke-width="1.5" />
+                  <!-- check badge -->
+                  <circle cx="148" cy="14" r="10" fill="#1a1a1a" stroke="#333" stroke-width="1" />
+                  <polyline points="143,14 147,18 154,10" stroke="#888" stroke-width="1.5" fill="none"
+                    stroke-linecap="round" />
+                  <line x1="16" y1="24" x2="130" y2="24" stroke="#2a2a2a" stroke-width="1.5" />
+                  <line x1="16" y1="38" x2="110" y2="38" stroke="#222" stroke-width="1.5" />
+                  <line x1="16" y1="50" x2="90" y2="50" stroke="#1e1e1e" stroke-width="1" />
+                  <!-- status dot: done -->
+                  <circle cx="14" cy="14" r="5" fill="#2a2a2a" stroke="#444" stroke-width="1" />
+                </g>
+
+                <!-- clean email card 2 -->
+                <g transform="translate(22,162)">
+                  <rect width="160" height="72" rx="12" fill="#0d0d0d" stroke="#262626" stroke-width="1.5" />
+                  <line x1="16" y1="24" x2="130" y2="24" stroke="#2a2a2a" stroke-width="1.5" />
+                  <line x1="16" y1="38" x2="95" y2="38" stroke="#1e1e1e" stroke-width="1.5" />
+                  <line x1="16" y1="50" x2="80" y2="50" stroke="#1a1a1a" stroke-width="1" />
+                  <circle cx="148" cy="14" r="10" fill="#1a1a1a" stroke="#333" stroke-width="1" />
+                  <polyline points="143,14 147,18 154,10" stroke="#777" stroke-width="1.5" fill="none"
+                    stroke-linecap="round" />
+                </g>
+
+                <!-- clean calendar -->
+                <g transform="translate(22,250)">
+                  <rect width="160" height="92" rx="12" fill="#111" stroke="#2a2a2a" stroke-width="1.5" />
+                  <rect x="0" y="0" width="160" height="28" rx="12" fill="#161616" />
+                  <rect x="0" y="16" width="160" height="12" fill="#161616" />
+                  <text x="12" y="19" font-family="Inter,sans-serif" font-size="9" fill="#555" letter-spacing="1">THIS
+                    WEEK</text>
+                  <!-- clean scheduled blocks -->
+                  <rect x="12" y="36" width="64" height="16" rx="4" fill="#1a1a1a" stroke="#2e2e2e" stroke-width="1" />
+                  <rect x="84" y="36" width="64" height="16" rx="4" fill="#1a1a1a" stroke="#2e2e2e" stroke-width="1" />
+                  <rect x="12" y="58" width="136" height="16" rx="4" fill="#1c1c1c" stroke="#2e2e2e" stroke-width="1" />
+                  <rect x="12" y="76" width="44" height="8" rx="4" fill="#222" />
+                  <rect x="64" y="76" width="44" height="8" rx="4" fill="#1e1e1e" />
+                </g>
+              </g>
+
+              <!-- Labels -->
+              <text x="80" y="316" font-family="Inter,sans-serif" font-size="10" fill="#3a3a3a" text-anchor="middle"
+                letter-spacing="1">BEFORE</text>
+              <text x="370" y="354" font-family="Inter,sans-serif" font-size="10" fill="#555" text-anchor="middle"
+                letter-spacing="1">AFTER</text>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         SECTION 2 — FEATURES
+    ════════════════════════════════════ -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Features</p>
+          <h2 class="section-heading">Everything you need.<br />Nothing you don't.</h2>
+        </div>
+
+        <div class="features-grid">
+
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">
+              <i data-lucide="mail"></i>
+            </div>
+            <h3 class="feature-title">Smart Email</h3>
+            <p class="feature-body">Quickly find important emails and generate thoughtful replies in seconds.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon">
+              <i data-lucide="calendar"></i>
+            </div>
+            <h3 class="feature-title">Intelligent Calendar</h3>
+            <p class="feature-body">Detect scheduling conflicts and automatically build a smarter daily plan.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon">
+              <i data-lucide="workflow"></i>
+            </div>
+            <h3 class="feature-title">AI Workflows</h3>
+            <p class="feature-body">Create workflows that automate repetitive actions and follow-up emails.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-4">
+            <div class="feature-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <h3 class="feature-title">Background AI Agents</h3>
+            <p class="feature-body">AI continuously organizes your inbox and schedule while you stay focused on
+              meaningful work.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         SECTION 3 — HOW IT WORKS
+    ════════════════════════════════════ -->
+    <section class="section how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">How It Works</p>
+          <h2 class="section-heading">Productivity in four simple steps.</h2>
+        </div>
+
+        <div class="steps-wrapper">
+          <!-- connector line desktop -->
+          <div class="steps-line" aria-hidden="true"></div>
+
+          <div class="steps-grid">
+
+            <div class="step reveal reveal-delay-1">
+              <div class="step-number">01</div>
+              <div class="step-dot" aria-hidden="true"></div>
+              <div class="step-content">
+                <h3 class="step-title">Connect</h3>
+                <p class="step-body">Securely connect Gmail and Google Calendar.</p>
+              </div>
+            </div>
+
+            <div class="step reveal reveal-delay-2">
+              <div class="step-number">02</div>
+              <div class="step-dot" aria-hidden="true"></div>
+              <div class="step-content">
+                <h3 class="step-title">Understand</h3>
+                <p class="step-body">HostnHub understands your schedule, conversations, and priorities.</p>
+              </div>
+            </div>
+
+            <div class="step reveal reveal-delay-3">
+              <div class="step-number">03</div>
+              <div class="step-dot" aria-hidden="true"></div>
+              <div class="step-content">
+                <h3 class="step-title">Automate</h3>
+                <p class="step-body">AI agents organize emails, detect conflicts, draft replies, and execute workflows.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal reveal-delay-4">
+              <div class="step-number">04</div>
+              <div class="step-dot" aria-hidden="true"></div>
+              <div class="step-content">
+                <h3 class="step-title">Stay Focused</h3>
+                <p class="step-body">Spend less time managing your day and more time accomplishing meaningful work.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         SECTION 4 — WHY HOSTNHUB
+    ════════════════════════════════════ -->
+    <section class="section why-section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Why HostnHub</p>
+          <h2 class="section-heading">Built for people who<br />value their time.</h2>
+        </div>
+
+        <div class="why-list">
+
+          <div class="why-card reveal reveal-delay-1">
+            <div class="why-icon"><i data-lucide="check"></i></div>
+            <p class="why-text">One intelligent workspace for Gmail and Google Calendar</p>
+          </div>
+
+          <div class="why-card reveal reveal-delay-2">
+            <div class="why-icon"><i data-lucide="check"></i></div>
+            <p class="why-text">AI agents work in the background—not just a chatbot</p>
+          </div>
+
+          <div class="why-card reveal reveal-delay-3">
+            <div class="why-icon"><i data-lucide="check"></i></div>
+            <p class="why-text">Automate repetitive tasks with customizable workflows</p>
+          </div>
+
+          <div class="why-card reveal reveal-delay-4">
+            <div class="why-icon"><i data-lucide="check"></i></div>
+            <p class="why-text">Minimal interface designed to reduce distractions</p>
+          </div>
+
+          <div class="why-card reveal reveal-delay-5">
+            <div class="why-icon"><i data-lucide="check"></i></div>
+            <p class="why-text">Powered by Corsair AI</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         SECTION 5 — CTA
+    ════════════════════════════════════ -->
+    <section class="section cta-section" id="cta">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <h2 class="cta-heading">Ready to spend less time organizing<br />and more time achieving?</h2>
+          <p class="cta-body">Join HostnHub and let AI handle the routine while you focus on what truly matters.</p>
+          <a href="#" class="btn btn-primary cta-btn" id="cta-final">
+            Get Started <span class="btn-arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col footer-brand">
+          <img src="logo-wide.jpeg" alt="HostNHub" class="footer-logo" width="140" height="38" />
+          <p class="footer-tagline">Your AI Productivity Hub.</p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Navigation</p>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Resources</p>
+          <ul class="footer-links">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Connect</p>
+          <ul class="footer-links">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&#169; 2026 HostnHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Scripts -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
